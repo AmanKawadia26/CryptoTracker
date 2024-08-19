@@ -1,0 +1,3 @@
+[{"userId":0,"username":"rishabh","password":"f6d8b1203495a937b766051690a69a3176ceb7f5937c885672c4b3779e1ac07a","email":"rishabh2882@gmail.com","mobile":9876543219,"notificationPreference":"","isAdmin":false},
+  {"userId":1,"username":"admin","password":"6d4525c2a21f9be1cca9e41f3aa402e0765ee5fcc3e7fea34a169b1730ae386e","email":"new.admin@example.com","mobile":1234567890,"notificationPreference":"","isAdmin":true}
+]
