@@ -17,7 +17,7 @@ var AppConfig Config
 
 func LoadConfig() {
 	// Attempt to open the configuration file
-	file, err := os.Open("C:/Users/NAMAN KAWADIA/GolandProjects/CryptocurrencyTracker/config.json")
+	file, err := os.Open("C:/Users/akawadia/Downloads/CryptoTracker/config.json")
 	if err != nil {
 		color.New(color.FgRed).Printf("Configuration file not found: %v\n", err)
 		log.Fatalf("Configuration file not found: %v", err)

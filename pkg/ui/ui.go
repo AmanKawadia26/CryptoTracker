@@ -69,24 +69,7 @@ func GetHiddenInput(prompt string) string {
 	return strings.TrimSpace(string(bytePassword))
 }
 
-// PrintColoredData prints data in a colored format
-func PrintColoredData(label string, value interface{}) {
-	fmt.Printf("%s: %v\n", colorCyan(label), value)
-}
-
-// PrintSectionHeader prints a section header
-func PrintSectionHeader(title string) {
-	fmt.Println()
-	fmt.Println(colorYellow("=== " + title + " ==="))
-	fmt.Println()
-}
-
 // PrintError prints an error message in red
 func PrintError(message string) {
 	fmt.Println(colorRed(message))
-}
-
-// PrintSuccess prints a success message in green
-func PrintSuccess(message string) {
-	fmt.Println(colorGreen(message))
 }
