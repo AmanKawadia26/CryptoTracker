@@ -38,7 +38,7 @@ func SaveRequest(request *models.Request) error {
 
 // GetAllUsers retrieves all users
 func GetAllUsers() ([]*models.User, error) {
-	data, err := ioutil.ReadFile("cmd/users.json") // Assuming user data is stored in user.json
+	data, err := ioutil.ReadFile("C:\\Users\\akawadia\\Downloads\\CryptoTracker\\cmd\\users.json") // Assuming user data is stored in user.json
 	if err != nil {
 		color.New(color.FgRed).Printf("Error reading user file: %v\n", err)
 		log.Println("Error reading user file:", err)

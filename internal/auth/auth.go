@@ -8,7 +8,7 @@ import (
 )
 
 // AuthenticateUser handles the login/signup process
-func AuthenticateUser() (*models.User, bool) {
+func AuthenticateUser() (*models.User, string) {
 	for {
 		ui.ClearScreen()
 		ui.DisplayAuthMenu()
@@ -19,8 +19,8 @@ func AuthenticateUser() (*models.User, bool) {
 
 		switch choice {
 		case 1:
-			if user, isAdmin, err := Login(); err == nil {
-				return user, isAdmin
+			if user, Role, err := Login(); err == nil {
+				return user, Role
 			} else {
 				color.New(color.FgRed).Println("Login failed:", err)
 			}
@@ -32,7 +32,7 @@ func AuthenticateUser() (*models.User, bool) {
 			}
 		case 3:
 			color.New(color.FgYellow).Println("Exiting...")
-			return nil, false
+			return nil, ""
 		default:
 			color.New(color.FgRed).Println("Invalid choice, please try again.")
 		}

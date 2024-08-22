@@ -10,11 +10,11 @@ import (
 	"os"
 )
 
-const userFile = "users.json"
+const userFile = "C:\\Users\\akawadia\\Downloads\\CryptoTracker\\cmd\\users.json"
 
 // SaveUser saves a user to a file
 func SaveUser(user *models.User) error {
-	users, err := loadUsers()
+	users, err := LoadUsers()
 	if err != nil {
 		color.Red("Failed to load users: %v", err)
 		return err
@@ -36,9 +36,25 @@ func SaveUser(user *models.User) error {
 	return nil
 }
 
+func SaveUsers(users []*models.User) error {
+	data, err := json.Marshal(users)
+	if err != nil {
+		color.Red("Failed to marshal users: %v", err)
+		return err
+	}
+
+	if err := ioutil.WriteFile(userFile, data, 0644); err != nil {
+		color.Red("Failed to write user file: %v", err)
+		return err
+	}
+
+	color.Green("Users saved successfully!")
+	return nil
+}
+
 // GetUserByUsername retrieves a user by username
 func GetUserByUsername(username string) (*models.User, error) {
-	users, err := loadUsers()
+	users, err := LoadUsers()
 	if err != nil {
 		color.Red("Failed to load users: %v", err)
 		return nil, err
@@ -55,8 +71,8 @@ func GetUserByUsername(username string) (*models.User, error) {
 	return nil, errors.New("user not found")
 }
 
-// loadUsers loads users from the file
-func loadUsers() ([]*models.User, error) {
+// LoadUsers loads users from the file
+func LoadUsers() ([]*models.User, error) {
 	if _, err := os.Stat(userFile); os.IsNotExist(err) {
 		color.Yellow("User file does not exist. Creating a new one.")
 		return []*models.User{}, nil
@@ -79,7 +95,7 @@ func loadUsers() ([]*models.User, error) {
 
 // GetUserProfile retrieves a user's profile by username
 func GetUserProfile(username string) (*models.User, error) {
-	users, err := loadUsers()
+	users, err := LoadUsers()
 	if err != nil {
 		color.Red("Failed to load users: %v", err)
 		return nil, err

@@ -1,6 +1,6 @@
 {
-  "api_key": "7deda392-59ec-47ff-a936-144f16086ed7",
-  "api_endpoint": "https://pro-api.coinmarketcap.com/v1",
+  "api_key": "885b7aa609bbe129f6df31ea09a03a4e",
+  "api_endpoint": "http://api.coinlayer.com/",
   "refresh_interval": 60,
   "admin_username": "admin",
   "admin_password": "admin_password",

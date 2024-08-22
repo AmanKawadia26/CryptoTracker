@@ -20,6 +20,6 @@ func UserProfile(username string) {
 	color.New(color.FgCyan).Printf("Username: %s\n", user.Username)
 	color.New(color.FgCyan).Printf("Email: %s\n", user.Email)
 	color.New(color.FgCyan).Printf("Mobile: %d\n", user.Mobile)
-	color.New(color.FgCyan).Printf("Is Admin: %t\n", user.IsAdmin)
+	color.New(color.FgCyan).Printf("Role: %s\n", user.Role)
 	fmt.Println()
 }

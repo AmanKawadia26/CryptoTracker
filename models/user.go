@@ -9,4 +9,5 @@ type User struct {
 	Mobile                 int    `json:"mobile"`
 	NotificationPreference string `json:"notificationPreference"`
 	IsAdmin                bool   `json:"isAdmin"`
+	Role                   string `json:"Role"`
 }

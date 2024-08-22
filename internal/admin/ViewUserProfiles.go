@@ -18,6 +18,8 @@ func ViewUserProfiles() {
 	}
 
 	for i, user := range users {
-		color.New(color.FgYellow).Printf("[%d] - Username: %s, Email: %s, Mobile: %s, Is Admin: %t\n", i+1, user.Username, user.Email, user.Mobile, user.IsAdmin)
+		if user.Role == "user" {
+			color.New(color.FgYellow).Printf("[%d] - Username: %s, Email: %s, Mobile: %d, Role: %s\n", i+1, user.Username, user.Email, user.Mobile, user.Role)
+		}
 	}
 }

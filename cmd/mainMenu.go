@@ -29,10 +29,10 @@ func mainMenu(user *models.User) {
 		case 3:
 			crypto.SetPriceAlert(user)
 		case 4:
-			if user.IsAdmin {
+			if user.Role == "admin" {
 				admin.ShowAdminPanel()
 			} else {
-				color.New(color.FgRed).Println("This user is not and admin.\n")
+				color.New(color.FgRed).Println("This user is not an admin.\n")
 			}
 		case 5:
 			UserProfile(user.Username)

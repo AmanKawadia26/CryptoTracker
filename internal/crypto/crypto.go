@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-const baseURL = "https://pro-api.coinmarketcap.com/v1/cryptocurrency"
+const baseURL = "http://api.coinlayer.com/"
 
 func getAPIResponse(endpoint string, params map[string]string) []byte {
 	client := &http.Client{}

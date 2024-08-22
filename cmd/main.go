@@ -15,10 +15,10 @@ func main() {
 	ui.DisplayWelcomeBanner()
 
 	// Start login/signup process
-	user, isAdmin := auth.AuthenticateUser()
+	user, Role := auth.AuthenticateUser()
 
 	// If user is admin, show admin panel
-	if isAdmin {
+	if Role == "admin" {
 		admin.ShowAdminPanel()
 		return
 	}

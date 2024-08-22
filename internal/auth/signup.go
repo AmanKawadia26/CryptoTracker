@@ -9,10 +9,17 @@ import (
 	"errors"
 	"fmt"
 	"github.com/fatih/color"
+	"log"
 )
 
 // Signup handles the signup process
 func Signup() error {
+
+	users, err := storage.LoadUsers()
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	var username, password, email, pan string
 	var mobile int
 
@@ -20,6 +27,11 @@ func Signup() error {
 	fmt.Scan(&username)
 	if !validation.IsValidUsername(username) {
 		return errors.New("invalid username: must be one word, alphanumeric, and can contain underscores")
+	}
+	for _, user := range users {
+		if user.Username == username {
+			return errors.New("user already exists")
+		}
 	}
 
 	password = ui.GetHiddenInput("Enter password: ")
@@ -50,6 +62,7 @@ func Signup() error {
 		Email:    email,
 		Mobile:   mobile,
 		IsAdmin:  false,
+		Role:     "user",
 	}
 
 	if err := storage.SaveUser(user); err != nil {
