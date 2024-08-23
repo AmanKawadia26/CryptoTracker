@@ -9,12 +9,15 @@ View Top Cryptocurrencies: Easily access the top 10 cryptocurrencies.
 Search Functionality: Look up specific cryptocurrencies by name.
 Price Alerts: Set custom price alerts for your favorite cryptocurrencies.
 Unavailable Crypto Tracking: Request tracking for cryptocurrencies not currently supported.
+
 ⚙️ Installation
 Prerequisites
 Ensure that you have Go installed on your system. You can download it from the official Go website.
 
 Clone the Repository - 
+
 git clone https://github.com/AmanKawadia26/CryptoTracker.git
+
 cd CryptoTracker
 
 Retrieve Dependencies - 
@@ -42,6 +45,6 @@ go run main.go
 
 This command will compile and execute the main.go file, starting the CryptoTracker application.
 
-📜 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+
+This 
 
