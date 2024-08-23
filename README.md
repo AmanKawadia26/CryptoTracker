@@ -27,13 +27,19 @@ Delegation Functionality: Admin can escalate any user role.
 
 📸 Snippets
 
-Home Page: ![image](https://github.com/user-attachments/assets/57dc05ca-8bf1-44ba-b46e-46dbd188bf0b)
+Home Page: 
 
-User Page: ![image](https://github.com/user-attachments/assets/20d8f935-a697-4818-968a-bacf82e6a61f)
+![image](https://github.com/user-attachments/assets/57dc05ca-8bf1-44ba-b46e-46dbd188bf0b)
+
+User Page: 
+
+![image](https://github.com/user-attachments/assets/20d8f935-a697-4818-968a-bacf82e6a61f)
 ![image](https://github.com/user-attachments/assets/5b112dd1-71c1-4875-bc23-d883ec84677e)
 ![image](https://github.com/user-attachments/assets/13428039-e2a0-4451-9b1d-739bab4cb9e1)
 
-Admin Page: ![image](https://github.com/user-attachments/assets/584a6b45-7527-48b2-885f-baaa6599430f)
+Admin Page: 
+
+![image](https://github.com/user-attachments/assets/584a6b45-7527-48b2-885f-baaa6599430f)
 ![image](https://github.com/user-attachments/assets/9ad1896a-eda4-490e-b02c-ff19ed4bb852)
 
 
